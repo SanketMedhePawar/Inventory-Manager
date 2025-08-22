@@ -6,7 +6,7 @@ pipeline {
   }
   environment {
     REGISTRY        = 'docker.io'
-    DOCKERHUB_REPO  = 'atuljkamble/inventory-manager'       // <— your Docker Hub repo
+    DOCKERHUB_REPO  = 'sanketmedhepawar/inventory-manager'       // <— your Docker Hub repo
     IMAGE_TAG       = "${env.BRANCH_NAME ?: 'main'}-${env.BUILD_NUMBER}"
     FULL_IMAGE      = "${env.DOCKERHUB_REPO}:${env.IMAGE_TAG}"
   }
@@ -14,7 +14,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        git branch: 'main', url: 'https://github.com/atulkamble/inventory-manager.git'
+        git branch: 'main', url: 'https://github.com/SanketMedhePawar/Inventory-Manager.git'
       }
     }
 
